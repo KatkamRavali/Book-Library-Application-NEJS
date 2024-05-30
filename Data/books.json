@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "name": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "price": "12.99",
+      "publisher": "Houghton Mifflin"
+    },
+    {
+      "id": "2",
+      "name": "A Man Called Ove",
+      "author": "Fredrik Backman",
+      "genre": "Novel",
+      "price": "28.9",
+      "publisher": "Forum"
+    },
+    {
+      "id": "3",
+      "name": "The Land Before Time",
+      "author": "Alan Moore",
+      "genre": "Fantasy",
+      "price": "32.9",
+      "publisher": "Houghton Mifflin"
+    },
+    {
+      "id": "4",
+      "name": "Harry Potter",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "price": "340",
+      "publisher": "Bloomsbury "
+    },
+    {
+      "id": "5",
+      "name": "The Girl On the train",
+      "author": "Ruskin Bond",
+      "genre": "Friction",
+      "price": "199",
+      "publisher": "Rupa"
+    }
+  ]
+}
