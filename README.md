@@ -17,10 +17,16 @@ POST : Create a new user [Completed]
 
 GET : Get user using id [Completed]
 PUT : Update user by using id [Completed]
-DELETE : Delete user details by using id >> Before deleteing
+DELETE : Delete user details by using id [Completed] >> Before deleteing
 (check if he / she still have any issued books with them or not)
 &&
 (check if he / she still have any fine to be paid or not)
+
+## /user/subscription-details/{id}
+
+GET : User subscription details >> Data subscription >> Vaild Till >> Fines
+
+<!--  ----------------------------------------------------------------------------------------------------  -->
 
 # Fine System
 
@@ -37,29 +43,6 @@ Week(Weekly)
 6 Month(Standard)
 12 Month(Premium)
 
-------------------------- Weekly Subscription --------------------
-
-> > If the subscription type is weekly && if the subscription date is 30-05-2024
-> > => then it is valid till 05-06-2024
-
-## Fines for subscription :
-
-withIn subscription date
-=> If u miss the subscription >> 20/-
-=> if we miss the subscription and renewal >> 20 \* per day
-
-## Example :-
-
-### Renewal Fine + Subscription Fine
-
-> > Book1 : Name
-> > week : Subscription Type
-> > 30-05-2024 : Subscription Date
-> > 31-05-2024 : Borrowed a book from library
-> > 06-06-2024 : Return date
-> > 15-06-2024 : Return date execed for : 2 days
-> > 20 + (2 \* 5) = 30/-
-
 ------------------------- Basic Subscription [ Monthly ] --------------------
 
 > > If the subscription type is Basic && if the subscription date is 30-05-2024
@@ -69,9 +52,9 @@ withIn subscription date
 
     withIn subscription date
 
-=> if we miss the renewal >> 25/-
-=> if we miss the subscription >> 50/-
-=> if we miss the subscription and renewal >> 50 + 25 \* per day
+=> if we miss the renewal >> 50/-
+=> if we miss the subscription >> 100/-
+=> if we miss the subscription and renewal >> 100 + 50 \* per day
 
 ## Example :-
 
@@ -163,10 +146,9 @@ withIn subscription date
 
 ## Fines for subscription :
 
-withIn subscription date
-=> if we miss the renewal >> 100/-
-=> if we miss the subscription >> 150/-
-=> if we miss the subscription and renewal >> 150 + 100 \* per day
+=> if we miss the renewal >> 50/-
+=> if we miss the subscription >> 100/-
+=> if we miss the subscription and renewal >> 100 + 50 \* per day
 
 ## Example :-
 
@@ -212,9 +194,9 @@ withIn subscription date
 
     withIn subscription date
 
-=> if we miss the renewal >> 150/-
-=> if we miss the subscription >> 200/-
-=> if we miss the subscription and renewal >> 200 + 150 \* per day
+=> if we miss the renewal >> 50/-
+=> if we miss the subscription >> 100/-
+=> if we miss the subscription and renewal >> 100 + 50 \* per day
 
 ## Example :-
 
@@ -251,24 +233,64 @@ withIn subscription date
 > > 02-06-2025 : Subscription end date for : 2 days
 > > 200 + (no of day[2] _ renewal fine amount[150]) = 500/- : Total Subscription + Renewal Fine
 
-## /user/subscription-details/{id}
-
-GET : User subscription details >> Data subscription >> Vaild Till >> Fines
+<!--  -----------------------------------------------------------------------------------------------  -->
 
 ## /books
 
-GET : Get all the books details
-POST : Update new book details
+GET : Get all the books details [Completed]
+POST : Update new book details [Completed]
 
 ## /books/{id}
 
-GET : Get book details by book id
-PUT : Update a book by id
+GET : Get book details by book id [Completed]
+PUT : Update a book by id [Completed]
 
 ## /books/issuedBook
 
-GET : Get details of issed books
+GET : Get all details of issed books [Completed]
 
 ## /books/issuedBook/withFine
 
 GET : Get all issued books with their fines
+
+---------------------------------------- Explanation ------------------------------------------------------
+
+...each
+
+## "name": "Jane",
+
+## "surname": "Doe",
+
+## "email": "user@email.com",
+
+## "subscriptionType": "Premium",
+
+## "subscriptionDate": "01/01/2022"
+
+...data
+"data": {
+
+## "name": "rohan",
+
+## "surname": "kinnal"
+
+}
+
+name: rohan
+surname: kinnal
+email: user@email.com
+subscriptioType: "Premium"
+"subscriptionDate": "01/01/2022"
+
+## About Date :
+
+date;
+Sat Jun 01 2024 14:58:16 GMT+0530 (India Standard Time)
+Math.floor(date / (1000*60*60*24));
+19875
+const dateInDays = new Date("01/01/2024");
+undefined
+dateInDays;
+Mon Jan 01 2024 00:00:00 GMT+0530 (India Standard Time)
+Math.floor(dateInDays / (1000*60*60*24));
+19722

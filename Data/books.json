@@ -10,14 +10,6 @@
     },
     {
       "id": "2",
-      "name": "A Man Called Ove",
-      "author": "Fredrik Backman",
-      "genre": "Novel",
-      "price": "28.9",
-      "publisher": "Forum"
-    },
-    {
-      "id": "3",
       "name": "The Land Before Time",
       "author": "Alan Moore",
       "genre": "Fantasy",
@@ -25,20 +17,12 @@
       "publisher": "Houghton Mifflin"
     },
     {
-      "id": "4",
+      "id": "3",
       "name": "Harry Potter",
       "author": "J.K. Rowling",
       "genre": "Fantasy",
       "price": "340",
       "publisher": "Bloomsbury "
-    },
-    {
-      "id": "5",
-      "name": "The Girl On the train",
-      "author": "Ruskin Bond",
-      "genre": "Friction",
-      "price": "199",
-      "publisher": "Rupa"
     }
   ]
 }
