@@ -1,0 +1,24 @@
+{
+  "name": "book-library-application-node-express",
+  "version": "1.0.0",
+  "description": "library",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatkamRavali/Book-Library-Application-NEJS.git"
+  },
+  "author": "Ravali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatkamRavali/Book-Library-Application-NEJS/issues"
+  },
+  "homepage": "https://github.com/KatkamRavali/Book-Library-Application-NEJS#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2"
+  }
+}
