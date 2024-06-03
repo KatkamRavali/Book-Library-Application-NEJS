@@ -167,6 +167,7 @@ routerUser.get("/subscription-details/:id", (req, res) => {
       message: "User with the id doesnot exist",
     });
   }
+
   //  To get the no of days
   const getDateInDays = (Data = "") => {
     // This is for getting the subscription date in days
@@ -184,9 +185,10 @@ routerUser.get("/subscription-details/:id", (req, res) => {
     return days;
   };
   const subscriptionType = (date) => {
-    if ((subscriptionDetails.subscriptionType = "Basic")) {
-      date = date + 30;
-    } else if (subscriptionDetails.subscriptionType === "Ouaterly") {
+    // if (subscriptionDetails.subscriptionType === "Basic") {
+    //   date = date + 30;
+    // } else
+    if (subscriptionDetails.subscriptionType === "Basic") {
       date = date + 90;
     } else if (subscriptionDetails.subscriptionType === "Standard") {
       date = date + 180;
@@ -209,7 +211,7 @@ routerUser.get("/subscription-details/:id", (req, res) => {
 
   const Data = {
     ...subscriptionDetails,
-    IsSubscriptionExpired: subscriptionExpire <= currentDate,
+    IsSubscriptionExpired: subscriptionExpire < currentDate,
     daysLeftForExpire:
       subscriptionExpire <= currentDate ? 0 : subscriptionExpire - currentDate,
     fine:
