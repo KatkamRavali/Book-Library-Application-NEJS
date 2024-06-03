@@ -294,3 +294,5 @@ dateInDays;
 Mon Jan 01 2024 00:00:00 GMT+0530 (India Standard Time)
 Math.floor(dateInDays / (1000*60*60*24));
 19722
+
+Completed the code
